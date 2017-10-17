@@ -1,7 +1,7 @@
 <nav>
   <div class="top">
     <div class="left">
-      <a href="/" class="title">TAR</a>
+      <a href="/{{ site.baseurl }}" class="title">TAR</a>
     </div>
     <div class="right">
       <ul>
@@ -12,9 +12,9 @@
   </div>
   <div class="bottom">
     <ul>
-      <li><a href="/"{% if page.title == 'Home' %}class="active"{% endif %}>Home</a></li>
-      <li><a href="/updates"{% if page.title == 'Updates' %}class="active"{% endif %}>Updates</a></li>
-      <li><a href="/contact"{% if page.title == 'Contact' %}class="active"{% endif %}>Contact</a></li>
+      <li><a href="{{ site.baseurl }}/"{% if page.permalink == {{ site.baseurl }} %}class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ site.baseurl }}/updates"{% if page.title == 'Updates' %}class="active"{% endif %}>Updates</a></li>
+      <li><a href="{{ site.baseurl }}/contact"{% if page.title == 'Contact' %}class="active"{% endif %}>Contact</a></li>
     </ul>
   </div>
 </nav>

@@ -22,6 +22,9 @@ html, body {
 // Fonts
 nav, .content p, ul {
   font-family: $copy-font;
+  .active {
+    font-weight: 700;
+  }
 }
 h1, h2, h3 {
   font-family: $title-font;
@@ -31,7 +34,7 @@ footer {
 }
 
 // Layout
-.content {
+section {
   width: 70%;
   margin: 0 auto;
 }
@@ -39,6 +42,28 @@ nav .top, nav .bottom {
   width: 70%;
   margin: 0 auto;
 }
+
+// Navigation
+nav {
+  ul {
+    list-style: none;
+  }
+  .top {
+    display: flex;
+    .left {
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+    .right {
+      justify-content: flex-end;
+    }
+  }
+  li {
+    display: inline;
+  }
+}
+
+// Footer
 footer {
   text-align: center;
   color: $light-gray;
