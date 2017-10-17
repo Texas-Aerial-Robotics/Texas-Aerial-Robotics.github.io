@@ -1,2 +1,54 @@
 ---
 ---
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|PT+Serif:400,700');
+
+// Variables
+$title-font: PT Serif;
+$copy-font: Roboto;
+$light-gray: #5b5b5b;
+
+// Basic
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+}
+
+// Fonts
+nav, .content p, ul {
+  font-family: $copy-font;
+}
+h1, h2, h3 {
+  font-family: $title-font;
+}
+footer {
+  font-family: $title-font;
+}
+
+// Layout
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+nav .top, nav .bottom {
+  width: 70%;
+  margin: 0 auto;
+}
+footer {
+  text-align: center;
+  color: $light-gray;
+  p {
+    font-weight: 700;
+  }
+  small {
+    font-weight: 400;
+  }
+}
+
+// Video embeds
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
