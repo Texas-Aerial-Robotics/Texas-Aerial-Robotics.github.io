@@ -2,11 +2,11 @@
 ---
 
 // Imports
-@import url('https://fonts.googleapis.com/css?family=Muli:400,700|PT+Serif:400,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|PT+Serif:400,700');
 
 // Variables
 $title-font: PT Serif;
-$copy-font: Muli;
+$copy-font: Karla;
 $light-gray: #5b5b5b;
 $dark-gray: #9C9C9C;
 $darker-gray: #525252;
@@ -25,9 +25,13 @@ html, body {
 // Fonts
 nav, .content p, ul {
   font-family: $copy-font;
+  line-height: 1.4;
   .active {
     font-weight: 700;
   }
+}
+nav .bottom ul li {
+  font-size: 1.1rem;
 }
 h1, h2, h3 {
   font-family: $title-font;
@@ -41,8 +45,12 @@ a {
 
 // Layout
 section, nav .top, nav .bottom {
-  width: 900px;
+  width: 800px;
   margin: 0 auto;
+}
+hr {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  margin-top: 30px;
 }
 
 // Navigation
@@ -59,9 +67,13 @@ nav {
     list-style: none;
   }
   .icon-twitter, .icon-fb {
-    width: 15px;
-    height: 15px;
-    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    fill: $dark-gray;
+    &:hover {
+      fill: $darker-gray;
+    }
   }
   .top {
     padding: 15px !important;
@@ -105,16 +117,74 @@ footer {
   small {
     font-weight: 400;
   }
+  #dronesvg {
+    width: 50px;
+    height: auto;
+    fill: $light-gray;
+  }
 }
 
 // Content
 .content {
   margin-top: 100px; // For nav
   padding: 40px 0;
+  p, a, ul li {
+    font-size: 20px;
+  }
+  p {
+    margin: 15px 0;
+  }
+  .embed-container {
+    margin: 25px 0;
+  }
+  h1, h2, h3, h4, h5 {
+    margin: 30px 0 15px 0;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+// Animations and Transitions
+.ani_drone {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+  transform-origin: 50% 50%;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 // Media Queries
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 850px) {
   section, nav .top, nav .bottom {
     width: calc(100% - 30px);
   }

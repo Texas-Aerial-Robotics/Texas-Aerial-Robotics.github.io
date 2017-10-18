@@ -8,7 +8,8 @@ You can reach out to the organization with any questions or interest by contacti
 
 - **Organization email:** [texasaerialrobotics@gmail.com](mailto:texasaerialrobotics@gmail.com)
 
-## Officers:
+
+## Officers
 
 - **President:** Eric Johnson [eric.emj.johnson@gmail.com](mailto:eric.emj.johnson@gmail.com)
 
