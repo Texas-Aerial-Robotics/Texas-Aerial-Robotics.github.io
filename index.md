@@ -17,6 +17,8 @@ Here is short video recapping our progress for IARC 2017.
 
 <div class='embed-container'><iframe src='https://www.youtube.com/embed/kKEPM2Dor_M?modestbranding=1&autohide=1&showinfo=0' frameborder='0' allowfullscreen></iframe></div>
 
+----
+
 # Sponsors
 
 ![Solidworks]({{ site.baseurl}}/assets/img/solidworks.png)
