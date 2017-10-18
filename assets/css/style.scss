@@ -2,12 +2,15 @@
 ---
 
 // Imports
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|PT+Serif:400,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700|PT+Serif:400,700');
 
 // Variables
 $title-font: PT Serif;
-$copy-font: Roboto;
+$copy-font: Muli;
 $light-gray: #5b5b5b;
+$dark-gray: #9C9C9C;
+$darker-gray: #525252;
+$bg-color: #fff;
 
 // Basic
 * {
@@ -32,30 +35,58 @@ h1, h2, h3 {
 footer {
   font-family: $title-font;
 }
+a {
+  text-decoration: none;
+}
 
 // Layout
-section {
-  width: 70%;
-  margin: 0 auto;
-}
-nav .top, nav .bottom {
-  width: 70%;
+section, nav .top, nav .bottom {
+  width: 900px;
   margin: 0 auto;
 }
 
 // Navigation
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $bg-color;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  z-index: 3;
+  border-bottom: 1px solid rgba(0,0,0,.05);
   ul {
     list-style: none;
   }
+  .icon-twitter, .icon-fb {
+    width: 15px;
+    height: 15px;
+    margin-left: 8px;
+  }
   .top {
+    padding: 15px !important;
     display: flex;
     .left {
       flex-grow: 1;
       justify-content: flex-start;
+      align-self: center;
     }
     .right {
       justify-content: flex-end;
+      align-self: center;
+    }
+  }
+  .bottom {
+    padding: 12px !important;
+    border-top: 1px solid rgba(0,0,0,.05);
+    li {
+      margin-right: 10px;
+      a {
+        color: $dark-gray;
+        &:hover {
+          color: $darker-gray;
+        }
+      }
     }
   }
   li {
@@ -66,12 +97,26 @@ nav {
 // Footer
 footer {
   text-align: center;
+  padding: 40px 0;
   color: $light-gray;
   p {
     font-weight: 700;
   }
   small {
     font-weight: 400;
+  }
+}
+
+// Content
+.content {
+  margin-top: 100px; // For nav
+  padding: 40px 0;
+}
+
+// Media Queries
+@media only screen and (max-width: 950px) {
+  section, nav .top, nav .bottom {
+    width: calc(100% - 30px);
   }
 }
 
