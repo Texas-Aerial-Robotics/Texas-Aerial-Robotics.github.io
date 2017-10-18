@@ -216,12 +216,6 @@ footer {
 }
 
 // Animations and Transitions
-.content {
-  opacity: 0;
-  animation-name: fadeInDown;
-  animation-duration: .4s;
-  animation-fill-mode: both;
-}
 #dronesvg .ani_drone {
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
@@ -258,8 +252,6 @@ footer {
   }
 }
 
-@keyframes fadeInDown{from{opacity:0;transform:translate3d(0, -20px, 0)}to{opacity:1;transform:none}}.vert{animation:vert 1s ease-in-out alternate infinite}@keyframes vert{to{transform:translateY(-5px)}}
-
 // Media Queries
 @media only screen and (max-width: 750px) {
   section, nav .top, nav .bottom, footer {
@@ -267,6 +259,9 @@ footer {
   }
   .content p {
     font-size: 1.1rem;
+  }
+  #logo {
+    height: 40px !important;
   }
 }
 
