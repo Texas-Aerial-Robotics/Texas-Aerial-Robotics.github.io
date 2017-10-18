@@ -11,6 +11,8 @@ $light-gray: #5b5b5b;
 $dark-gray: #9C9C9C;
 $darker-gray: #525252;
 $bg-color: #fff;
+$ut-color: #c57230;
+$ut-color-darker: #b25d22;
 
 // Basic
 * {
@@ -44,18 +46,17 @@ a {
 }
 
 // Layout
-section, nav .top, nav .bottom {
+section, nav .top, nav .bottom, footer {
   width: 800px;
   margin: 0 auto;
 }
 hr {
-  border-bottom: 1px solid rgba(0,0,0,.05);
+  border-bottom: 1px solid rgba(0,0,0,.1);
   margin-top: 30px;
 }
 
 // Navigation
 nav {
-  position: fixed;
   top: 0;
   width: 100%;
   background: $bg-color;
@@ -82,6 +83,9 @@ nav {
       flex-grow: 1;
       justify-content: flex-start;
       align-self: center;
+      a {
+        display: flex;
+      }
     }
     .right {
       justify-content: flex-end;
@@ -104,6 +108,18 @@ nav {
   li {
     display: inline;
   }
+  #logo {
+    shapre-rendering: geometricPrecision;
+    height: 60px;
+    width: auto;
+    transition: 0.2s all ease;
+    .ani_drone {
+      transition: 0.2s all ease;
+    }
+    &:hover .ani_drone {
+      fill: $ut-color;
+    }
+  }
 }
 
 // Footer
@@ -117,22 +133,38 @@ footer {
   small {
     font-weight: 400;
   }
+  .footerhr {
+    margin-bottom: -40px;
+
+  }
   #dronesvg {
     width: 50px;
+    padding: 15px;
+    background: $bg-color;
     height: auto;
     fill: $light-gray;
   }
 }
 
 // Content
+.header_img {
+  width: 100%;
+  height: auto;
+}
 .content {
-  margin-top: 100px; // For nav
-  padding: 40px 0;
+  padding: 0 0 40px 0;
   p, a, ul li {
     font-size: 20px;
   }
   p {
     margin: 15px 0;
+  }
+  a {
+    color: $ut-color;
+    font-weight: bold;
+    &:hover {
+      color: $ut-color-darker;
+    }
   }
   .embed-container {
     margin: 25px 0;
@@ -146,13 +178,17 @@ footer {
 }
 
 // Animations and Transitions
-.ani_drone {
+#dronesvg .ani_drone {
   -webkit-animation: rotating 5s linear infinite;
   -moz-animation: rotating 5s linear infinite;
   -ms-animation: rotating 5s linear infinite;
   -o-animation: rotating 5s linear infinite;
   animation: rotating 5s linear infinite;
   transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
 }
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
@@ -185,7 +221,7 @@ footer {
 
 // Media Queries
 @media only screen and (max-width: 850px) {
-  section, nav .top, nav .bottom {
+  section, nav .top, nav .bottom, footer {
     width: calc(100% - 30px);
   }
 }
