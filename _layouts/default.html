@@ -13,6 +13,15 @@ layout: none
     </div>
     {{ content }}
   </section>
+  <!--Add an svg animation to the footer that only works in Chrome-->
+  <script>
+  $(document).ready(function() {
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+    if(isChrome){
+      $("#dronesvg .ani_drone").css("-webkit-animation", "rotating 5s linear infinite");
+    }
+  });
+  </script>
   {% include footer.html %}
 </body>
 </html>
