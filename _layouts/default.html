@@ -9,6 +9,7 @@ layout: none
   <section class="content">
     <div class="header">
       <h1>{{ page.title }}</h1>
+      {% if page.path contains '_posts' %}<p class="date">{{ page.date | date: "%B %e, %Y" }} • {{ page.author }}</p>{% endif %}
     </div>
     {{ content }}
   </section>

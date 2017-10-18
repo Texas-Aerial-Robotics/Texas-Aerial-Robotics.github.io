@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+home: true
 header_img: team.jpg
 ---
 
@@ -15,8 +16,6 @@ We are currently based out of the Aerospace Department in the Cockrell School of
 Here is short video recapping our progress for IARC 2017.
 
 <div class='embed-container'><iframe src='https://www.youtube.com/embed/kKEPM2Dor_M?modestbranding=1&autohide=1&showinfo=0' frameborder='0' allowfullscreen></iframe></div>
-
-----
 
 # Sponsors
 
