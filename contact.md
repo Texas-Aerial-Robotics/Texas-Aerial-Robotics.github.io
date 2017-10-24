@@ -23,6 +23,6 @@ You can reach out to the organization with any questions or interest by contacti
 
 - **Hardware Lead:** Ethan Starr [ethanstarr@utexas.edu](mailto:ethanstarr@utexas.edu)
 
-- **Computations Lead:** Colin Lewis[colin.lewis@utexas.edu](mailto:colin.lewis@utexas.edu)
+- **Computations Lead:** Colin Lewis [colin.lewis@utexas.edu](mailto:colin.lewis@utexas.edu)
 
-- **Treasurer:** Cameron Lane[cameronlane@utexas.edu](mailto:cameronlane@utexas.edu)
+- **Treasurer:** Cameron Lane [cameronlane@utexas.edu](mailto:cameronlane@utexas.edu)

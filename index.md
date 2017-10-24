@@ -27,7 +27,7 @@ Here is short video recapping our progress for IARC 2017.
 <script src="{{site.baseurl}}/assets/js/stats.min.js"></script>
 
 <script>
-var container, stats;
+var container = document.getElementById( 'model' ), stats;
 var camera, scene, renderer;
 var mouseX = 0, mouseY = 0;
 var windowHalfX = 400;
@@ -35,7 +35,6 @@ var windowHalfY = 400;
 init();
 animate();
 function init() {
-	container = document.getElementById( 'model' );
 	camera = new THREE.PerspectiveCamera( 15, 1, 1, 2000 );
 	camera.position.z = 4;
 	// scene
@@ -61,7 +60,7 @@ function init() {
 	window.addEventListener( 'resize', onWindowResize, false );
 }
 function onWindowResize() {
-	windowHalfX = 200;
+	windowHalfX = $("#model").width()/2;
 	windowHalfY = 200;
 	camera.aspect = 1;
 	camera.updateProjectionMatrix();
@@ -77,8 +76,8 @@ function animate() {
 	render();
 }
 function render() {
-	camera.position.x = 1 + -( mouseX - camera.position.y ) * .008;
-	camera.position.y = 3 + -( mouseY - camera.position.y ) * .03;
+	camera.position.x =  -( mouseX - camera.position.y ) * .008;
+	camera.position.y = 2 + -( mouseY - camera.position.y ) * .03;
 	camera.lookAt( scene.position );
 	renderer.render( scene, camera );
 }
