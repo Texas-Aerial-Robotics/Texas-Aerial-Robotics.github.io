@@ -4,8 +4,6 @@ title: About
 home: true
 ---
 
-<span id="rcanvas" class="button inactive">2d canvas renderer</span>
-			<span id="rwebgl" class="button">WebGL renderer</span>
 
 Texas Aerial Robotics is an international intercollegiate competition team based out of the University of Texas at Austin. Currently, we are preparing for the 2017 International Aerial Robotics Competition in Atlanta, Georgia. The competition itself will be held in both Atlanta and Beijing, for the Asia/Pacific portion of the competition.
 
@@ -28,19 +26,19 @@ Here is short video recapping our progress for IARC 2017.
 var container, stats;
 var camera, scene, renderer;
 var mouseX = 0, mouseY = 0;
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
+var windowHalfX = 500 / 2;
+var windowHalfY = 500 / 2;
 init();
 animate();
 function init() {
 	container = document.getElementById( 'model' );
-	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+	camera = new THREE.PerspectiveCamera( 20, 500 / 500, 1, 2000 );
 	camera.position.z = 4;
 	// scene
 	scene = new THREE.Scene();
 	var ambient = new THREE.AmbientLight( 0x444444 );
 	scene.add( ambient );
-	var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+	var directionalLight = new THREE.DirectionalLight( 0xf2f2f2 );
 	directionalLight.position.set( 0, 0, 1 ).normalize();
 	scene.add( directionalLight );
 	// BEGIN Clara.io JSON loader code
@@ -49,20 +47,21 @@ function init() {
 	 	scene.add( obj );
 	} );
 	// END Clara.io JSON loader code
-	renderer = new THREE.WebGLRenderer();
+	renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setPixelRatio( window.devicePixelRatio );
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 0 );
+	renderer.setSize( 500, 500 );
 	container.appendChild( renderer.domElement );
 	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 	//
 	window.addEventListener( 'resize', onWindowResize, false );
 }
 function onWindowResize() {
-	windowHalfX = window.innerWidth / 2;
-	windowHalfY = window.innerHeight / 2;
-	camera.aspect = window.innerWidth / window.innerHeight;
+	windowHalfX = 500 / 2;
+	windowHalfY = 500 / 2;
+	camera.aspect = 500 / 500;
 	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( 500, 500 );
 }
 function onDocumentMouseMove( event ) {
 	mouseX = ( event.clientX - windowHalfX ) / 2;
@@ -74,8 +73,8 @@ function animate() {
 	render();
 }
 function render() {
-	camera.position.x += ( mouseX - camera.position.x ) * .15;
-	camera.position.y += ( - mouseY - camera.position.y ) * .15;
+	camera.position.x = 1 + -( mouseX - camera.position.y ) * .005;
+	camera.position.y = 4 + -( mouseY - camera.position.y ) * .005;
 	camera.lookAt( scene.position );
 	renderer.render( scene, camera );
 }
