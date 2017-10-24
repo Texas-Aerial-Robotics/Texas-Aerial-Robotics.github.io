@@ -30,13 +30,13 @@ Here is short video recapping our progress for IARC 2017.
 var container, stats;
 var camera, scene, renderer;
 var mouseX = 0, mouseY = 0;
-var windowHalfX = 500 / 2;
-var windowHalfY = 500 / 2;
+var windowHalfX = 400;
+var windowHalfY = 400;
 init();
 animate();
 function init() {
 	container = document.getElementById( 'model' );
-	camera = new THREE.PerspectiveCamera( 15, 500 / 500, 1, 2000 );
+	camera = new THREE.PerspectiveCamera( 15, 1, 1, 2000 );
 	camera.position.z = 4;
 	// scene
 	scene = new THREE.Scene();
@@ -54,18 +54,18 @@ function init() {
 	renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setClearColor( 0x000000, 0 );
-	renderer.setSize( 500, 500 );
+	renderer.setSize( 400, 400 );
 	container.appendChild( renderer.domElement );
 	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 	//
 	window.addEventListener( 'resize', onWindowResize, false );
 }
 function onWindowResize() {
-	windowHalfX = 500 / 2;
-	windowHalfY = 500 / 2;
-	camera.aspect = 500 / 500;
+	windowHalfX = 200;
+	windowHalfY = 200;
+	camera.aspect = 1;
 	camera.updateProjectionMatrix();
-	renderer.setSize( 500, 500 );
+	renderer.setSize( 400, 400 );
 }
 function onDocumentMouseMove( event ) {
 	mouseX = ( event.clientX - windowHalfX ) / 2;
@@ -78,7 +78,7 @@ function animate() {
 }
 function render() {
 	camera.position.x = 1 + -( mouseX - camera.position.y ) * .005;
-	camera.position.y = 4 + -( mouseY - camera.position.y ) * .01;
+	camera.position.y = 3 + -( mouseY - camera.position.y ) * .01;
 	camera.lookAt( scene.position );
 	renderer.render( scene, camera );
 }

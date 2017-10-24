@@ -61,7 +61,7 @@ hr {
   padding: 0;
   margin: auto;
   display: block;
-  width: 500px;
+  width: 400px;
   height: 400px;
   top: 0;
   bottom: 0;
@@ -69,6 +69,7 @@ hr {
   right: 0;
   canvas {
     margin: 20px auto;
+    display: block;
   }
 }
 
