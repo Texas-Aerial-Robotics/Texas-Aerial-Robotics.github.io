@@ -5,7 +5,7 @@ home: true
 ---
 
 
-  <div id="model"></div>
+<div id="model"></div>
 
 Texas Aerial Robotics is an international intercollegiate competition team based out of the University of Texas at Austin. Currently, we are preparing for the 2017 International Aerial Robotics Competition in Atlanta, Georgia. The competition itself will be held in both Atlanta and Beijing, for the Asia/Pacific portion of the competition.
 
@@ -87,5 +87,5 @@ function render() {
 
 # Sponsors
 
-![Solidworks]({{ site.baseurl}}/assets/img/solidworks.png)
-![GDMS]({{ site.baseurl}}/assets/img/gdms.png)
+![Solidworks]({{ site.baseurl}}/assets/img/solidworks.png#fifty)
+![GDMS]({{ site.baseurl}}/assets/img/gdms.png#fifty)

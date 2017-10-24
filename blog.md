@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Updates
-permalink: /updates/
+title: Blog
+permalink: /blog/
 ---
 
 <ul id="post_container">

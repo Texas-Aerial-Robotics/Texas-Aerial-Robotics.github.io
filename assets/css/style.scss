@@ -168,6 +168,10 @@ footer {
   width: 100%;
   height: auto;
 }
+img[src$='#fifty'] {
+  width: calc(50% - 40px) !important;
+  margin: 10px !important;
+}
 .content {
   padding: 0 0 40px 0;
   p, a, ul li {
@@ -279,6 +283,10 @@ footer {
   }
   #logo {
     height: 40px !important;
+  }
+  img[src$='#fifty'] {
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 
