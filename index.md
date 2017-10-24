@@ -13,6 +13,8 @@ More information about the competition can be found [here](http://www.aerialrobo
 
 We are currently based out of the Aerospace Department in the Cockrell School of Engineering at UT, but have members in almost all engineering majors. Although we are mostly an engineering organization, we do have a few majors outside of the realm.
 
+![TAR Squad]({{site.baseurl}}/assets/img/team.jpg)
+
 Here is short video recapping our progress for IARC 2017.
 
 <div class='embed-container'><iframe src='https://www.youtube.com/embed/kKEPM2Dor_M?modestbranding=1&autohide=1&showinfo=0' frameborder='0' allowfullscreen></iframe></div>
@@ -32,7 +34,7 @@ init();
 animate();
 function init() {
 	container = document.getElementById( 'model' );
-	camera = new THREE.PerspectiveCamera( 20, 500 / 500, 1, 2000 );
+	camera = new THREE.PerspectiveCamera( 15, 500 / 500, 1, 2000 );
 	camera.position.z = 4;
 	// scene
 	scene = new THREE.Scene();
