@@ -55,6 +55,23 @@ hr {
   margin-top: 30px;
 }
 
+// Drone 3D Model
+#model {
+  pointer-events: none !important;
+  padding: 0;
+  margin: auto;
+  display: block;
+  width: 500px;
+  height: 400px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  canvas {
+    margin: 20px auto;
+  }
+}
+
 // Navigation
 nav {
   top: 0;
