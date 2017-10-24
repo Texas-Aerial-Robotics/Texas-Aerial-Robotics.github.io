@@ -77,8 +77,8 @@ function animate() {
 	render();
 }
 function render() {
-	camera.position.x = 1 + -( mouseX - camera.position.y ) * .005;
-	camera.position.y = 3 + -( mouseY - camera.position.y ) * .01;
+	camera.position.x = 1 + -( mouseX - camera.position.y ) * .008;
+	camera.position.y = 3 + -( mouseY - camera.position.y ) * .03;
 	camera.lookAt( scene.position );
 	renderer.render( scene, camera );
 }
