@@ -131,10 +131,10 @@ nav {
     height: 60px;
     width: auto;
     transition: 0.2s all ease;
-    .ani_drone {
+    .ani_drone_anticlock, .ani_drone_clock {
       transition: 0.2s all ease;
     }
-    &:hover .ani_drone {
+    &:hover .ani_drone_anticlock, &:hover .drone-frame, &:hover .ani_drone_clock  {
       fill: $ut-color;
     }
   }
@@ -238,14 +238,14 @@ img[src$='#fifty'] {
 }
 
 // Animations and Transitions
-.ani_drone {
+.ani_drone_clock, .ani_drone_anticlock {
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
 }
-@-webkit-keyframes rotating /* Safari and Chrome */ {
+@-webkit-keyframes rotating-clock /* Safari and Chrome */ {
   from {
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -257,7 +257,7 @@ img[src$='#fifty'] {
     transform: rotate(360deg);
   }
 }
-@keyframes rotating {
+@keyframes rotating-clock {
   from {
     -ms-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -271,6 +271,34 @@ img[src$='#fifty'] {
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotating-anticlock /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotating-anticlock {
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 

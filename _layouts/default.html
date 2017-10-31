@@ -19,7 +19,8 @@ layout: none
   $(document).ready(function() {
     var isChrome = !!window.chrome && !!window.chrome.webstore;
     if(isChrome){
-      $(".ani_drone").css("-webkit-animation", "rotating 5s linear infinite");
+      $(".ani_drone_clock").css("-webkit-animation", "rotating-clock 5s linear infinite");
+      $(".ani_drone_anticlock").css("-webkit-animation", "rotating-anticlock 5s linear infinite");
     }
   });
   </script>
