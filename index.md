@@ -7,7 +7,7 @@ home: true
 
 <!-- <div id="model"></div> -->
 
-![TAR Squad]({{site.baseurl}}/assets/img/team1718alt2.jpg)
+![TAR Squad]({{site.baseurl}}/assets/img/team1718.jpg)
 
 Texas Aerial Robotics is an international intercollegiate competition team based out of the University of Texas at Austin. Currently, we are preparing for the 2017 International Aerial Robotics Competition in Atlanta, Georgia. The competition itself will be held in both Atlanta and Beijing, for the Asia/Pacific portion of the competition.
 
