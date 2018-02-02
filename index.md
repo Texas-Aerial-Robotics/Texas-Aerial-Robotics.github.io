@@ -31,7 +31,8 @@ if (screen && screen.width > 480) {
 </script>
 ----
 
-# Sponsors
+# Donors
 
 ![Solidworks]({{ site.baseurl}}/assets/img/solidworks.png#fifty)
 ![GDMS]({{ site.baseurl}}/assets/img/gdms.png#fifty)
+![OrbitalATK]({{ site.baseurl}}/assets/img/logo_for_orbital_atk.png#fifty)
