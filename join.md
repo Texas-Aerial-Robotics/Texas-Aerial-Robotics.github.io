@@ -6,10 +6,7 @@ permalink: /join/
 
 <style>
 .tablelines table, .tablelines td, .tablelines th {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding: 1%;
 }
 </style>
 
