@@ -29,6 +29,39 @@ if (screen && screen.width > 480) {
   document.write('<script src="{{site.baseurl}}/assets/js/model.js"><\/script>');
 }
 </script>
+
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  // Replace the id by any other public page id
+  FB.api('texasaerialrobotics/feed', { limit: 3 }, function(result) {
+    $('#fb-feed').empty();
+    $(result.data).each(function(i, post) {
+        entry = $('<div class="fb-item"></div>');
+        if (post.icon) {
+          entry.append('<img class="icon" src="' + post.icon + '" />');
+        }
+        switch(post.type) {
+          case 'status':
+            entry.append('<div class="fb-content">' + post.message + ' (' + post.from.name + ')</div>');
+          break;
+
+          case 'link':
+            entry.append('<div class="fb-content">' + post.message + ' (' + post.from.name + ')</div>');
+            entry.append('<div class="fb-content"><a href="' + post.link + '">' + post.name + '</a></div>');
+          break;
+
+          case 'photo':
+          case 'video':
+            entry.append('<div class="fb-content"><a href="' + post.link + '">' + post.message + '</a> (' + post.from.name + ')</div>');
+          break;
+        }
+        $('#fb-feed').append(entry);
+    });
+  });
+</script>
+<div id="fb-feed">
+</div>
+
 ----
 
 # Donors
