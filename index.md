@@ -4,6 +4,14 @@ title: About
 home: true
 ---
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=1088695987962946&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- <div id="model"></div> -->
 
@@ -29,6 +37,9 @@ if (screen && screen.width > 480) {
   document.write('<script src="{{site.baseurl}}/assets/js/model.js"><\/script>');
 }
 </script>
+
+<div class="fb-page" data-href="https://www.facebook.com/texasaerialrobotics/" data-tabs="timeline, events, messages" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/texasaerialrobotics/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/texasaerialrobotics/">Texas Aerial Robotics</a></blockquote></div>
+
 ----
 
 # Donors
