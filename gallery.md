@@ -8,10 +8,11 @@ permalink: /gallery/
 <script src="https://www.publicalbum.org/js/pa-embed-player.min.js" async></script>
 <div class="pa-embed-player" style="width:100%; height:480px; display:none;"
   data-link="http://photos.app.goo.gl/Bpzz7TLUUyfCxLfd7"
-  data-title=""
+  data-title="Texas Aerial Robotics"
   data-descrition="Album by Texas Aerial Robotics"
-  data-slideshow-delay="20">
+  data-slideshow-delay="10">
   <!-- 52 images -->
+  <img data-src="https://lh3.googleusercontent.com/ng3Pk2LcPHe00VXkSUrHQI86CK7cSfIbT3YogLIPnkLTjYG-fl4JSl2Ys9dLgbuyF2bQmbLzEDTer87anmD0HxkfYnbuSpvqH0mObEGXrQKXeSQvEQ2vXc2rBbaRZprdT8CdiHiDrQ=w5183-h2916" src="" alt="" />
   <img data-src="https://lh3.googleusercontent.com/ZbtDGG3WzFE9DxtRkJgxbNp7Y5EttIwt_Nq4ujOyyaN6y21N0QZfm10fL4oA4mRoXVjlA_GQI6Fj_D-TsJUgGyJCGlBj7bXS7HSN9UOKtbuoSoh94oakTdKuaev6CuqhRb7oqYdpAw=w642-h509" src="" alt="" />
   <img data-src="https://lh3.googleusercontent.com/-7oAaJUt6Cum4VE_wGrwtiPN4E7zdh75tRuQosxwoOb5om8Y5tLUAO-ALZxZkgRXXT8QUN2j_QtujRNMELddETVmq_OCPILeJQDPvaVg7eCwqEJA8LXU8EU0Ptx2Wr-O6CBft9TgvQ=w3024-h4032" src="" alt="" />
   <img data-src="https://lh3.googleusercontent.com/j2GAz6UmT4exXeKkwdIVtd8HTWz9e0L4YkdUHlbG9Tp364GkLAyzEfCQcZVMMnrhBgJY2V06F3eSuOp_74BKIUzxLsxFahl0Yc6oKRSmNWfwtS0zz4maiwS30zEyJeNu6y_nj-K_ng=w3024-h4032" src="" alt="" />
