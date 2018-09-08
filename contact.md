@@ -19,7 +19,7 @@ You can reach out to the organization with any questions or interest by contacti
 
 - **Controls Lead:** Nick Boeker [nick.boeker@utexas.edu](mailto:nick.boeker@utexas.edu)
 
-- **Hardware Lead:** Adam Bays [adambays80@gmail.com](mailto:adambays80@gmail.com)
+- **Hardware Lead:** Noel Brownback [noelbrownback@gmail.com](mailto:noelbrownback@gmail.com)
 
 - **Hardware Lead:** Ethan Starr [ethanstarr@utexas.edu](mailto:ethanstarr@utexas.edu)
 
