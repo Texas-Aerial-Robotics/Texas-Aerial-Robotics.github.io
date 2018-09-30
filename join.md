@@ -14,7 +14,6 @@ permalink: /join/
 - Robotics?
 - Neural Networks?
 - Machine Learning?
-- Data Science?
 - Aerial Vehicles?
 - Drones/Quadcopters?
 - Computer Vision?
@@ -24,20 +23,17 @@ permalink: /join/
 - Team Logistics?
 
 
-## More details + who we are and what we do: [https://docs.google.com/document/d/14gXtwW--_RU-arlJJdeX8Z6lXMNMvCd1ovK4SZg7WuU/](https://docs.google.com/document/d/14gXtwW--_RU-arlJJdeX8Z6lXMNMvCd1ovK4SZg7WuU/)
+We have a mission to accomplish. If you want to work on the cutting edge of aerial vehicles and autonomous control, stop by at the General Meeting or any of the subteam meetings listed below:
 
 
-We always love bringing on new members. We have a mission to accomplish, so if you want to work on the cutting edge of aerial vehicles and autonomous control, stop by at the General Meeting or any of the subteam meetings listed below: (Meeting times will be changing. See above Google Doc for current information.)
-
-
-| What                         | When |      | Where   |
-|:---------------------------- |:---- |:---- |:------- |
-| General Meeting              | SAT  | 11-2 | WRW 312 |
-| Business                     | FRI  | 4-5  | WRW 413 |
-| Computations and Simulations | WED  | 7-9  | WRW 413 |
-| Computer Vision              | MON  | 4-6  | WRW 312 |
-| Controls                     | MON  | 5-7  | WRW 312 |
-| Hardware                     | THUR | 5-7  | WRW 205 |
+| What                         | When |            | Where   |
+|:---------------------------- |:---- |:---------- |:------- |
+| General Meeting              | SAT  | 11:30-2:30 | WRW 312 |
+| Business                     | FRI  | 6-8        | WRW 205 |
+| Computations and Simulations | FRI  | 5-7        | WRW 205 |
+| Computer Vision              | TUE  | 6:45-8:45  | WRW 205 |
+| Controls                     | THUR | 6-8        | WRW 205 |
+| Hardware                     | TUE  | 6-8        | WRW 205 |
 {: .tablelines}
 
 
