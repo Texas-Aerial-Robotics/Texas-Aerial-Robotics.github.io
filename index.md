@@ -4,6 +4,7 @@ title: About
 home: true
 ---
 
+<meta http-equiv="refresh" content="0; URL='https://texasaerialrobotic.wixsite.com/website'" />
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
