@@ -25,9 +25,9 @@ var NAVTREE =
 [
   [ "Texas Aerial Robotics Documentation", "index.html", [
     [ "Texas Aerial Robotics", "index.html", null ],
-    [ "Control API Example Code", "md_control_api_tutorial.html", null ],
+    [ "Control API", "md_control_api_tutorial.html", null ],
     [ "Enviroment Setup Instructions", "md_enviorment_setup.html", null ],
-    [ "Texas Aerial Robotics ROS package", "md_README.html", null ],
+    [ "Texas Aerial Robotics ROS package", "md__home_eric_catkin_ws_src_Mission8_OutOfControls_README.html", null ],
     [ "mission8_sim", "md__home_eric_catkin_ws_src_mission8_sim_README.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
