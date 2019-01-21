@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Texas Aerial Robotics Documentation: Related Pages</title>
+<title>Texas Aerial Robotics Documentation: Training YOLO with BBox-Label-Tool</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('pages.html','');});
+$(document).ready(function(){initNavTree('md_yoloTraining.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,20 +94,54 @@ $(document).ready(function(){initNavTree('pages.html','');});
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Training YOLO with BBox-Label-Tool </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_control_api_tutorial.html" target="_self">Control API</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_enviorment_setup.html" target="_self">Enviroment Setup Instructions</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_linux_commands.html" target="_self">Common Linux Commands</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_yolo.html" target="_self">YOLO Image Recognition</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md_yoloTraining.html" target="_self">Training YOLO with BBox-Label-Tool</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
+<div class="textblock"><p>A simple tool for labeling object bounding boxes in images, implemented with Python Tkinter.</p>
+<h2>Dependencies</h2>
+<div class="fragment"><div class="line">sudo apt-get install python-imaging-tk</div></div><!-- fragment --><h2>Training instructions</h2>
+<p>The following are a modified version of the instructions found on the yolo website</p>
+<ol type="1">
+<li>Strat by collecting images. the goal is to collect close to 500 img/class</li>
+<li>create a new folder in BBox-Label-Tool/Images</li>
+<li>For multi-class task, modify 'class.txt' with your own class-candidates and before labeling bbox,</li>
+<li>run main.py and annotate images. The current tool requires that <b>the images to be labeled reside in /Images/001, /Images/002, etc. You will need to modify the code if you want to label images elsewhere</b>. For multi-class choose the 'Current Class' in the Combobox and make sure you click 'ComfirmClass' button.</li>
+<li>To create a new bounding box, left-click to select the first vertex. Moving the mouse to draw a rectangle, and left-click again to select the second vertex.<ul>
+<li>To cancel the bounding box while drawing, just press <code>&lt;Esc&gt;</code>.</li>
+<li>To delete a existing bounding box, select it from the listbox, and click <code>Delete</code>.</li>
+<li>To delete all existing bounding boxes in the image, simply click <code>ClearAll</code>.</li>
+</ul>
+</li>
+<li>After finishing one image, click <code>Next</code> to advance. Likewise, click <code>Prev</code> to reverse. Or, input an image id and click <code>Go</code> to navigate to the speficied image.<ul>
+<li>Be sure to click <code>Next</code> after finishing a image, or the result won't be saved.</li>
+</ul>
+</li>
+<li>run the convert.py script to format the annotations in yolo form</li>
+<li>combine jour dataset_list files using your favorite text editor into train.txt and test.txt. It is recommended to not train on one of your data sets to use as a accuracy metric.</li>
+<li>Set up the darknet config.</li>
+</ol>
+<ul>
+<li>Create a file in darknet/cfg with the name &lt;nameofdata&gt;.data</li>
+<li>Create a folder to store the output weights in. ex /home/eric/backup <div class="fragment"><div class="line">1 classes= 20</div><div class="line">2 train  = &lt;path-to-data&gt;/train.txt</div><div class="line">3 valid  = &lt;path-to-data&gt;/test.txt</div><div class="line">4 names = data/voc.names</div><div class="line">5 backup = &lt;path-to-backup-folder&gt;</div></div><!-- fragment --></li>
+</ul>
+<ol type="1">
+<li>run <code>./darknet detector train cfg/&lt;nameofdata&gt;.data cfg/yolov3.cfg &lt;weights(if you want to continue training from a backup)&gt;</code></li>
+</ol>
+<p><b>Screenshot:</b> <img src="./screenshot.png" alt="Label Tool" class="inline"/></p>
+<h2>Data Organization </h2>
+<p>LabelTool</p>
+<p>|</p>
+<p>|&ndash;main.py *# source code for the tool*</p>
+<p>|</p>
+<p>|&ndash;Images/ *# direcotry containing the images to be labeled*</p>
+<p>|</p>
+<p>|&ndash;Labels/ *# direcotry for the labeling results*</p>
+<p>| |&ndash;Labels-Yolo-Format *# direcotry for the labeling results in yolo readable format*</p>
+<p>|</p>
+<p>|&ndash;Examples/ *# direcotry for the example bboxes* </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

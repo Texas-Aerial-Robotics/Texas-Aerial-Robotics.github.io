@@ -28,6 +28,8 @@ var NAVTREE =
     [ "Control API", "md_control_api_tutorial.html", null ],
     [ "Enviroment Setup Instructions", "md_enviorment_setup.html", null ],
     [ "Common Linux Commands", "md_linux_commands.html", null ],
+    [ "YOLO Image Recognition", "md_yolo.html", null ],
+    [ "Training YOLO with BBox-Label-Tool", "md_yoloTraining.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
