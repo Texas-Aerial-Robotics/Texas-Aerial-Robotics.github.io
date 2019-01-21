@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['actorplugin',['ActorPlugin',['../classgazebo_1_1ActorPlugin.html',1,'gazebo']]]
+  ['control_5fapi_5fwaypoint',['control_api_waypoint',['../structcontrol__api__waypoint.html',1,'']]]
 ];

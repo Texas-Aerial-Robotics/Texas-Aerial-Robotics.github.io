@@ -4,5 +4,6 @@ var hierarchy =
     [ "ModelPlugin", null, [
       [ "gazebo::ActorPlugin", "classgazebo_1_1ActorPlugin.html", null ],
       [ "gazebo::ActorPlugin", "classgazebo_1_1ActorPlugin.html", null ]
-    ] ]
+    ] ],
+    [ "orientation", "structorientation.html", null ]
 ];

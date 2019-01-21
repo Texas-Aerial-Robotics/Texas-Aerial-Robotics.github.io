@@ -27,19 +27,13 @@ var NAVTREE =
     [ "Texas Aerial Robotics", "index.html", null ],
     [ "Control API", "md_control_api_tutorial.html", null ],
     [ "Enviroment Setup Instructions", "md_enviorment_setup.html", null ],
-    [ "Texas Aerial Robotics ROS package", "md__home_eric_catkin_ws_src_Mission8_OutOfControls_README.html", null ],
-    [ "mission8_sim", "md__home_eric_catkin_ws_src_mission8_sim_README.html", null ],
+    [ "Common Linux Commands", "md_linux_commands.html", null ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -48,8 +42,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]
@@ -57,7 +50,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ActorPlugin_8cpp.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

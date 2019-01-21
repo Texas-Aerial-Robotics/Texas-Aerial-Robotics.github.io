@@ -1,0 +1,25 @@
+var magfit__elliptical_8py =
+[
+    [ "constrain", "magfit__elliptical_8py.html#a400fcffd87709a20566085cd6bf5bc25", null ],
+    [ "correct", "magfit__elliptical_8py.html#a20fabb2795bcf794156ea4dcd0de400a", null ],
+    [ "fit_data", "magfit__elliptical_8py.html#a49f681dd9fd38c70a2fae3c88a9456a6", null ],
+    [ "magfit", "magfit__elliptical_8py.html#a28ed55d76fd1e8ca62265a0001d3138c", null ],
+    [ "noise", "magfit__elliptical_8py.html#a739fa4369b4770e3c0d3397590f468f2", null ],
+    [ "plot_data", "magfit__elliptical_8py.html#a2a617907e38315cd4da32635d1a9805b", null ],
+    [ "radius", "magfit__elliptical_8py.html#ad64337f0e7fad08ebdde9d99930c0c4b", null ],
+    [ "radius_cmp", "magfit__elliptical_8py.html#a103d997042a9a3703cb39c2a9ae8cbf2", null ],
+    [ "select_data", "magfit__elliptical_8py.html#aee3a351a012aa1e67eb9de0407ef7830", null ],
+    [ "sphere_error", "magfit__elliptical_8py.html#a4200efcc23a749e0d97aa8750c3cced9", null ],
+    [ "action", "magfit__elliptical_8py.html#af4aa92b8e9e699beaac25bc75ea83223", null ],
+    [ "args", "magfit__elliptical_8py.html#a69e14dd920bbdaf1717e57d936df3a31", null ],
+    [ "default", "magfit__elliptical_8py.html#a6f339a1c3fd61ac7328afce3bb7c39c7", null ],
+    [ "dest", "magfit__elliptical_8py.html#a8a0619b8f79192239f6078d169563530", null ],
+    [ "float", "magfit__elliptical_8py.html#a6861d34d9d70f54d30b6530cf1403a66", null ],
+    [ "help", "magfit__elliptical_8py.html#a314f9318148b8a5815a70fec0379d438", null ],
+    [ "metavar", "magfit__elliptical_8py.html#ace1a7eb5e44ba06cb92630c20408d92d", null ],
+    [ "nargs", "magfit__elliptical_8py.html#ae35ec6f4f899b1d4c72de9be6f114537", null ],
+    [ "None", "magfit__elliptical_8py.html#aa362eb699230b51628756d1d7ca8a30e", null ],
+    [ "parser", "magfit__elliptical_8py.html#a75b9b06fde5d9dd1c5bb5bef2ce48b96", null ],
+    [ "total", "magfit__elliptical_8py.html#ae030b336a8082034bb05fa5688d765d1", null ],
+    [ "type", "magfit__elliptical_8py.html#af208e011e31d230d7f4d4121cae3ac59", null ]
+];

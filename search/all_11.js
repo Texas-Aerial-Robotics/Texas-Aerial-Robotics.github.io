@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['wait4connect',['wait4connect',['../group__control__functions.html#ga1921a30d419eb397f7e40875217b45d1',1,'control_functions.hpp']]],
-  ['wait4start',['wait4start',['../group__control__functions.html#gab6fe46f505ab9804b4ed98b96286a811',1,'control_functions.hpp']]],
-  ['walking_5fanimation',['WALKING_ANIMATION',['../ActorPlugin_8cpp.html#a388e061d19ce59af78e522d6fe968c84',1,'WALKING_ANIMATION():&#160;ActorPlugin.cpp'],['../randomwalk__plugin_8cpp.html#a388e061d19ce59af78e522d6fe968c84',1,'WALKING_ANIMATION():&#160;randomwalk_plugin.cpp'],['../simple__world__plugin_8cpp.html#a388e061d19ce59af78e522d6fe968c84',1,'WALKING_ANIMATION():&#160;simple_world_plugin.cpp']]],
-  ['waypoint',['waypoint',['../mission7FlightCode_8cpp.html#aa4390e7b823c95c4e2bebd1506fc2159',1,'mission7FlightCode.cpp']]],
-  ['waypoint_5fg',['waypoint_g',['../control__functions_8hpp.html#a571aa9dcfa0f6cdd083a500f4c2afa8c',1,'control_functions.hpp']]],
-  ['waypoint_5fupdate',['waypoint_update',['../mission7FlightCode_8cpp.html#ad855d0dc2b0026beae4b33caffdc7ac2',1,'mission7FlightCode.cpp']]],
-  ['window',['window',['../keyTalker_8cpp.html#a80de27bd7dc4e2b2ad3d5895b97a70f0',1,'keyTalker.cpp']]]
+  ['texas_20aerial_20robotics',['Texas Aerial Robotics',['../index.html',1,'']]],
+  ['transformations_2dros',['Transformations-Ros',['../md__home_eric_catkin_ws_src_Transformations-Ros_README.html',1,'']]],
+  ['texas_20aerial_20robotics_20ros_20package',['Texas Aerial Robotics ROS package',['../md_README.html',1,'']]],
+  ['takeoff',['takeoff',['../group__control__functions.html#gac0aa671c99c09687515ec5bb8891c7d2',1,'control_functions.hpp']]],
+  ['takeoff_5fclient',['takeoff_client',['../control__functions_8hpp.html#aec70101dd7479fcb0f549dde9f1d0789',1,'control_functions.hpp']]],
+  ['th',['th',['../keyTalker_8cpp.html#aa78c78a33ff8aacecd1105f94444acd3',1,'keyTalker.cpp']]],
+  ['theta',['THETA',['../simpleTransform_8cpp.html#a5df70b2be2fb90739f095fe5884e3980',1,'simpleTransform.cpp']]],
+  ['theta_5fx',['THETA_X',['../simpleTransform_8cpp.html#a09e608b263cec5728b4904fcfadc223d',1,'simpleTransform.cpp']]],
+  ['turn',['turn',['../keyTalker_8cpp.html#a5c5b4121f85e7805d4801519d76870de',1,'keyTalker.cpp']]]
 ];

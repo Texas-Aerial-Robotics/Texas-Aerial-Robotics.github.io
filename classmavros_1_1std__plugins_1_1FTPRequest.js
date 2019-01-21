@@ -1,0 +1,46 @@
+var classmavros_1_1std__plugins_1_1FTPRequest =
+[
+    [ "ErrorCode", "group__plugin.html#ga6a8ced5d703e3cd6216c5042e9eaa67e", [
+      [ "kErrNone", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67eae86722d9394287916642cb7f406fd8d4", null ],
+      [ "kErrFail", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67ea84d1bb571bd6c91e2d5bb058de3d3350", null ],
+      [ "kErrFailErrno", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67eae943875999f395b71314e35bf8d0a1e3", null ],
+      [ "kErrInvalidDataSize", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67eae0152479e4c81bc277211f63bc62693e", null ],
+      [ "kErrInvalidSession", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67eafc10e3c3c94f7fcfb93aea0aca254f94", null ],
+      [ "kErrNoSessionsAvailable", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67eadfc596248fba0275a99af54ce288f343", null ],
+      [ "kErrEOF", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67ead99fd4e6f8ef5bc7d209e2ec080cf4ec", null ],
+      [ "kErrUnknownCommand", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67ea2c8a93294412ac50ed701da3b6ca1617", null ],
+      [ "kErrFailFileExists", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67ea84aa10febdbce7bca815467a6edda11f", null ],
+      [ "kErrFailFileProtected", "group__plugin.html#gga6a8ced5d703e3cd6216c5042e9eaa67ea2a4999bca0f72647926218959c428e0c", null ]
+    ] ],
+    [ "Opcode", "group__plugin.html#gaa250490cd75da57eb00865e70210f672", [
+      [ "kCmdNone", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a4d893c501fd26da8a1fdc3f478d0a85d", null ],
+      [ "kCmdTerminateSession", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a1a438ee59082be89a87abfca2f8598ab", null ],
+      [ "kCmdResetSessions", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a8f5bbf5ab102c019ce126cbe44659dc8", null ],
+      [ "kCmdListDirectory", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672ae29e5b3caecf3898fcbf5c073d9f89c3", null ],
+      [ "kCmdOpenFileRO", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672ab9b54fe5983aea8d8c5e0f8ac34c1279", null ],
+      [ "kCmdReadFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672ae607c70da8bbc315cc578f51c967118c", null ],
+      [ "kCmdCreateFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672abc47eb420c8e5f75e8ad539ee4a2b644", null ],
+      [ "kCmdWriteFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a6ba24d5c7e08e301942d0ec3186543a1", null ],
+      [ "kCmdRemoveFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672af654e489a69902e38202fba631a00ca0", null ],
+      [ "kCmdCreateDirectory", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672ac80c4f9c6a9fefc1895c7344aefb500b", null ],
+      [ "kCmdRemoveDirectory", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672aed57fb17bc16d1a83b1109fc6f017966", null ],
+      [ "kCmdOpenFileWO", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672af7b251e2c0063516bcb76ef1990b3c45", null ],
+      [ "kCmdTruncateFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a802bdbf59d034202685db7e12fceb717", null ],
+      [ "kCmdRename", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a09d8617905e8fc6f07b92a07b0c50b82", null ],
+      [ "kCmdCalcFileCRC32", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a947657fa1bef3f83865eefd61f550aa5", null ],
+      [ "kCmdBurstReadFile", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672a1a73e6655d993991a0b1e6281063d27f", null ],
+      [ "kRspAck", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672aa59cf34836fe912c24462f09bbaa29f3", null ],
+      [ "kRspNak", "group__plugin.html#ggaa250490cd75da57eb00865e70210f672ab6594d2846e473df72ad8bd84907b980", null ]
+    ] ],
+    [ "FTPRequest", "group__plugin.html#ga65eec8a4ea0ca2018dab26b891c6cd6b", null ],
+    [ "FTPRequest", "group__plugin.html#gafaf43c2f853d7c01415db8b820e6390c", null ],
+    [ "data", "group__plugin.html#ga8624be9f0794a1e686a06f68fe405bcd", null ],
+    [ "data_c", "group__plugin.html#ga0786d26298e7a59ee7e22d9bc0c7f7b1", null ],
+    [ "data_u32", "group__plugin.html#gae1a0d86b63b05cad94daaaf57bd30a60", null ],
+    [ "decode_valid", "group__plugin.html#gab4fea3506785f409afdfb0917bab879f", null ],
+    [ "get_target_system_id", "group__plugin.html#ga49ae6323933afa8b164aaffccb798a0a", null ],
+    [ "header", "group__plugin.html#gacb2fd6b1a67b8f6d182b943f64af8802", null ],
+    [ "raw_payload", "group__plugin.html#ga5db0f34c632d274bb013df23cb8aa362", null ],
+    [ "send", "group__plugin.html#gadc186f416bee256e70ceecb927d3a135", null ],
+    [ "set_data_string", "group__plugin.html#ga79bbc1bfe041055051a72f5c1efb630d", null ]
+];
