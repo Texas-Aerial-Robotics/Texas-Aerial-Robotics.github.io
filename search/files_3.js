@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linux_5fcommands_2emd',['linux_commands.md',['../linux__commands_8md.html',1,'']]]
+  ['enviorment_5fsetup_2emd',['enviorment_setup.md',['../enviorment__setup_8md.html',1,'']]]
 ];

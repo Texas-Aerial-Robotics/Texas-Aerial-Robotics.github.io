@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yolo_20image_20recognition',['YOLO Image Recognition',['../md_yolo.html',1,'']]]
+  ['gazebo',['Gazebo',['../md_basic_gazebo.html',1,'']]]
 ];

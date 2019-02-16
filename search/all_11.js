@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['z',['z',['../structcontrol__api__waypoint.html#af77b8d62f18d1b4c1884b46147751b49',1,'control_api_waypoint']]],
-  ['z_5fmax',['z_max',['../mission7FlightCode_8cpp.html#aff08dd48e7d75394795f798133985c94',1,'mission7FlightCode.cpp']]],
-  ['z_5fmin',['z_min',['../mission7FlightCode_8cpp.html#ab7008d31ac4fa776d1bb38fa9aaf88d2',1,'mission7FlightCode.cpp']]]
+  ['x',['x',['../structcontrol__api__waypoint.html#a381813ee0649f54116dec8d8ed78b26e',1,'control_api_waypoint']]],
+  ['x_5fmax',['x_max',['../mission7FlightCode_8cpp.html#a73fc13d83638687d92d5ccf9e4fe1722',1,'mission7FlightCode.cpp']]],
+  ['x_5fmin',['x_min',['../mission7FlightCode_8cpp.html#ab56799f110a6fbd87dc59c9c171516dc',1,'mission7FlightCode.cpp']]]
 ];

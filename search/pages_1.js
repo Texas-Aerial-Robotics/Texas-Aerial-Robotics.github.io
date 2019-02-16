@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['enviroment_20setup_20instructions',['Enviroment Setup Instructions',['../md_enviorment_setup.html',1,'']]]
+  ['control_20api',['Control API',['../md_control_api_tutorial.html',1,'']]],
+  ['common_20linux_20commands',['Common Linux Commands',['../md_linux_commands.html',1,'']]]
 ];

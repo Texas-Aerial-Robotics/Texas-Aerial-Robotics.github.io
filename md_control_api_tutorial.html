@@ -46,7 +46,74 @@
         <h1>
           Control API
         </h1>
-<p>The below functions will help you to easily create highlevel path planning programs. This API is designed to be used with the ArduCopter flight stack. <a href="group__control__functions.html" class="m-dox">Control_<wbr />functions</a></p><p>The below code is a simple example that executes a square flight pattern. <a href="controlAPIExample_8cpp.html" class="m-dox">src/<wbr />controlAPIExample.cpp</a></p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;control_functions.hpp&gt;</span><span class="cp"></span>
+<p>The below functions will help you to easily create highlevel path planning programs. This API is designed to be used with the ArduCopter flight stack. control_functions</p><p>The following tutorial will show you how to make a simple program that allows you to send your drone to waypoints.</p><p>First, we will clone the package Mission8_OutOfControls. <code class="m-code"><span class="n">git</span> <span class="n">clone</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/Texas-Aerial-Robotics/Mission8_OutOfControls.git</span></code></p><p>this package contains the file control_functions.hpp . This file contains a bunch of useful functions for creating intelligent drone applications.</p><p>Once you have cloned Mission8_OutOfControls. Create a new file in called <code>control_tutorial.cpp</code> in <code>Mission8_OutOfControls/src</code></p><p>First we will include our control functions <code class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;control_functions.hpp&gt;</span><span class="cp"></span></code> This will allow us to use all of our control functions and structures</p><p>Next add the main function and initialize ros</p><pre class="m-code"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//initialize ros </span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;offb_node&quot;</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">controlnode</span><span class="p">;</span>
+
+
+    <span class="c1">//Rest of code here</span>
+
+
+<span class="p">}</span></pre><p>We will then add the function init_publisher_subscriber(). This function takes our ros node handle as an input and initializes subcribers that will collect the necissary information from our autopilot. add the following</p><pre class="m-code"><span class="c1">//initialize control publisher/subscribers</span>
+<span class="n">init_publisher_subscriber</span><span class="p">(</span><span class="n">controlnode</span><span class="p">);</span></pre><p>The control API contains the structure <code>control_api_waypoint</code> this structure contains the variables <code>x y z psi</code> which you can use to set locations and orientations of your drone.</p><p>To make your drone fly in a square specify the following waypoints</p><pre class="m-code"><span class="c1">//specify some waypoints </span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">control_api_waypoint</span><span class="o">&gt;</span> <span class="n">waypointList</span><span class="p">;</span>
+<span class="n">control_api_waypoint</span> <span class="n">nextWayPoint</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">psi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">waypointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nextWayPoint</span><span class="p">);</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">psi</span> <span class="o">=</span> <span class="o">-</span><span class="mi">90</span><span class="p">;</span>
+<span class="n">waypointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nextWayPoint</span><span class="p">);</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">psi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">waypointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nextWayPoint</span><span class="p">);</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">psi</span> <span class="o">=</span> <span class="mi">90</span><span class="p">;</span>
+<span class="n">waypointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nextWayPoint</span><span class="p">);</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">nextWayPoint</span><span class="p">.</span><span class="n">psi</span> <span class="o">=</span> <span class="mi">180</span><span class="p">;</span>
+<span class="n">waypointList</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nextWayPoint</span><span class="p">);</span></pre><p>we will then add the following functions to handle preflight opperations</p><pre class="m-code"><span class="c1">// wait for FCU connection</span>
+<span class="n">wait4connect</span><span class="p">();</span>
+
+<span class="c1">//wait for used to switch to mode GUIDED</span>
+<span class="n">wait4start</span><span class="p">();</span>
+
+<span class="c1">//create local reference frame </span>
+<span class="n">initialize_local_frame</span><span class="p">();</span></pre><p>The function <code>wait4connect()</code> will loop until the node can communicate with the flight control unit (FCU). Once the connection with the FCU is established then we will use the function <code>wait4start()</code> to hold the program until the pilot executes the program by switching the FCU flight mode to GUIDED. This can be done from a ground control stattion (GCS) such as Mission Planner or QGroundControlv or from a switch on a radio controller. Finally, once the command to execcute the mission is sent you will use the function <code>initialize_local_frame()</code> to create your navigation frame. This function creates the local reference frame based on the starting location of the drone.</p><p>Next we will request takeoff. using the function <code>takeoff(float takeOffHieght)</code>. Add</p><pre class="m-code"><span class="c1">//request takeoff</span>
+<span class="n">takeoff</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span></pre><p>Finally we will add our control loop</p><pre class="m-code">    <span class="c1">//specify control loop rate. We recommend a low frequency to not over load the FCU with messages. Too many messages will cause the drone to be sluggish</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Rate</span> <span class="n">rate</span><span class="p">(</span><span class="mf">2.0</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>
+        <span class="n">rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">check_waypoint_reached</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&lt;</span> <span class="n">waypointList</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">set_destination</span><span class="p">(</span><span class="n">waypointList</span><span class="p">[</span><span class="n">counter</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="n">waypointList</span><span class="p">[</span><span class="n">counter</span><span class="p">].</span><span class="n">y</span><span class="p">,</span><span class="n">waypointList</span><span class="p">[</span><span class="n">counter</span><span class="p">].</span><span class="n">z</span><span class="p">,</span> <span class="n">waypointList</span><span class="p">[</span><span class="n">counter</span><span class="p">].</span><span class="n">psi</span><span class="p">);</span>
+                <span class="n">counter</span><span class="o">++</span><span class="p">;</span>  
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="c1">//land after all waypoints are reached</span>
+                <span class="n">land</span><span class="p">();</span>
+            <span class="p">}</span>   
+        <span class="p">}</span>   
+        
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre><p>This loop will continually send the requested destination to the FCU via the <code>set_destination(x, y, z, psi)</code> function. The loop uses the function <code>check_waypoint_reached()</code> to determained when the drone has arrived at the requested destination. The function return 1 or 0. 1 denotes the drone has arrived. Each time the waypoint is reached the vector of waypoints is iterated to request the next waypoint via the variable <code>counter</code>. Finally, the drone will land via the land function <code>land()</code></p><p>Your program should like like the following src/controlAPIExample.cpp</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;control_functions.hpp&gt;</span><span class="cp"></span>
 <span class="c1">//include API </span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
@@ -126,7 +193,7 @@
 <span class="cp"># New Terminal</span>
 <span class="n">roslaunch</span> <span class="n">out_of_controls</span> <span class="n">apm</span><span class="p">.</span><span class="n">launch</span>
 <span class="cp"># New Terminal </span>
-<span class="n">roslaunch</span> <span class="n">out_of_controls</span> <span class="n">contolAPIExample</span><span class="p">.</span><span class="n">launch</span></pre><p>NOTE** you can tile gnome terminals by pressing <code>ctrl + shift + t</code></p>
+<span class="n">roslaunch</span> <span class="n">out_of_controls</span> <span class="n">contolAPIExample</span><span class="p">.</span><span class="n">launch</span></pre><p>NOTE** you can tile gnome terminals by pressing <code>ctrl + shift + t</code></p><p>You should now have a basic understanding of the functions available for controling your drone. You should be able to use these functions to help you make more complex navigation code.</p>
       </div>
     </div>
   </div>

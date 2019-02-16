@@ -25,34 +25,22 @@ var NAVTREE =
 [
   [ "Texas Aerial Robotics Documentation", "index.html", [
     [ "Texas Aerial Robotics", "index.html", null ],
+    [ "ArduCopter", "md_arducopter.html", null ],
+    [ "Gazebo", "md_basic_gazebo.html", null ],
+    [ "Robot Operating System (ROS)", "md_basic_ros.html", null ],
     [ "Control API", "md_control_api_tutorial.html", null ],
     [ "Enviroment Setup Instructions", "md_enviorment_setup.html", null ],
     [ "Common Linux Commands", "md_linux_commands.html", null ],
+    [ "Object Contextualization with Monocular Camera for a UAV", "md_monocular_uav.html", null ],
     [ "YOLO Image Recognition", "md_yolo.html", null ],
-    [ "Training YOLO with BBox-Label-Tool", "md_yoloTraining.html", null ],
-    [ "Modules", "modules.html", "modules" ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
-      ] ]
-    ] ]
+    [ "Using YOLO with ROS", "md_yolo_ros.html", null ],
+    [ "Training YOLO with BBox-Label-Tool", "md_yoloTraining.html", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
